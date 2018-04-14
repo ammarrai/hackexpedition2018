@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "bootstrap": "^3.3.7",
     "http-server": "^0.11.1"
   },
   "scripts": {
