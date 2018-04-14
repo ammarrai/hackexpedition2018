@@ -1,0 +1,64 @@
+<DOCTYPE!>
+<html>
+  <head>
+    <title>BusinessTracker</title>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.css' rel='stylesheet' />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.2/mapbox-gl.js'></script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Project name</a>
+            </div>
+          </div>
+        </nav>
+
+
+
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+          <!-- <div class="container"> -->
+            <div class="row" style="padding-top: 55px;" >
+              <div class="col-md-6 ">
+                <div id="business-map" style="height: 100%;">
+                </div>
+                <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoienVyaWh1bnRlcjkyIiwiYSI6ImNqYmNlOXR0bDFqNHoyd3JqejRid2I5NmEifQ.Kewvn_gXPpJ3fM-M0Zq2xg';
+                var map = new mapboxgl.Map({
+                    container: 'business-map', // container id
+                    style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
+                    center: [-74.50, 40], // starting position [lng, lat]
+                    zoom: 9 // starting zoom
+                });
+                </script>
+              </div>
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Location Name
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">A-Z</a>
+                      <a class="dropdown-item" href="#">Z-A</a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+                <!-- list of business -->
+              </div>
+            </div>
+          <!-- </div> -->
+  </body>
+  </html>
