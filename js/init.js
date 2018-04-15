@@ -1,12 +1,12 @@
 
 console.log("Initializing");
+$(document).ready(function(){
 
 var data = function () {
   var xmlHttp = new XMLHttpRequest();
   xmlHttp.open("GET", './data/location.json', false);
   xmlHttp.send(null);
   var information = JSON.parse(xmlHttp.responseText)
-  // console.log("Got data",info);
   return information;
 }
 
@@ -29,7 +29,5 @@ var data = function () {
   var template = Handlebars.compile(source);
   var $body = $('.content-wrapper');
   $body.append(template(businessObj));
-
-
-
   console.log(businessObj);
+});
