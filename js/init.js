@@ -24,10 +24,21 @@ var data = function () {
     }
     businessObj.push(businessData)
   })
+  //
+  // console.log("before", businessObj);
+  // var source = $('#sampleArea').html();
+  // var template = Handlebars.compile(source);
+  // var $body = $('.content-wrapper');
+  // $body.append(template(businessObj));
+  // console.log("Template", template(businessObj));
 
+
+  function addBus(bus) {
   var source = $('#sampleArea').html();
   var template = Handlebars.compile(source);
   var $body = $('.content-wrapper');
-  $body.append(template(businessObj));
-  console.log(businessObj);
+    return $body.append(template(bus));
+  }
+
+  console.log("method", addBus(businessObj));
 });

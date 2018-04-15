@@ -29,7 +29,7 @@
             var map = new mapboxgl.Map({
                 container: 'business-map', // container id
                 style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
-                center: [-74.50, 40], // starting position [lng, lat]
+                center: [-78.6569, 37.4316], // starting position [lng, lat]
                 zoom: 9 // starting zoom
             });
           </script>
@@ -102,8 +102,10 @@
           </div>
           <div class="content-wrapper">
             <script id="sampleArea" type="text/x-handlebars-template">
-                    <h1>{{businessObj.businessAddress}}</h1>
-            </script>
+              {{#each businessObj}}
+                 <h1>{{this.businessAddress}}</h1>
+               {{/each}}
+              </script>
           </div>
           <br/>
 
