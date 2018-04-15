@@ -1,31 +1,92 @@
 <DOCTYPE!>
 <html>
-  <head>
+<head>
     <title>BusinessTracker</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-          <div class="container">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#">Project name</a>
-            </div>
-          </div>
-        </nav>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">ExpeditionHack2017</a>
+        </div>
+    </div>
+</nav>
 
-        <!-- Main jumbotron for a primary marketing message or call to action -->
-        <div class="jumbotron">
-          <div class="container">
-            <h1>Hello, world!</h1>
-          </div>
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+    <div class="container">
+        <h2>Business Tracker</h2>
+
+        <div class="rolesDiv" id="rolesDiv">
+            <form id="roleForm">
+                Select your role:
+                <select id="role">
+                    <option value="apple">Academic Researcher</option>
+                    <option value="orange">Law Enforcement</option>
+                    <option value="orange">Non-Profit Organization</option>
+                </select>
+            </form>
+            <button type="button" onclick="selectRole()">Select Role</button>
         </div>
 
-  </body>
-  </html>
+        <br>
+        <br>
+        <br>
+
+        <div class="search" id="searchDiv" style="display:none">
+            <form id="stateForm">
+                State:
+                <select id="state">
+                    <option value="md">Maryland</option>
+                    <option value="dc">District of Columbia</option>
+                    <option value="va">Virginia</option>
+                </select>
+
+                County:
+                <select id="county">
+                    <option value="mont">Montgomery</option>
+
+                </select>
+
+                City:
+                <select id="city">
+                    <option value="ss">Silver Spring</option>
+
+                </select>
+
+            </form>
+            <button type="button" onclick="selectLocation()">Search</button>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function selectRole() {
+        document.getElementById('rolesDiv').hidden = "hidden";
+        document.getElementById('searchDiv').style.display = "inline-block";
+
+    }
+
+    function selectLocation() {
+        document.getElementById('searchDiv').style.display = "none";
+
+    }
+
+</script>
+</body>
+</html>
+x
