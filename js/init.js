@@ -11,6 +11,7 @@ var data = function () {
 }
 
   var info = data();
+  console.log();
   var businessObj = []
   info.map(function (x) {
     var businessData = {
